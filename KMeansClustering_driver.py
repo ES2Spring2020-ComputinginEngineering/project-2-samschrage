@@ -13,6 +13,7 @@ previous_hemoglobin_centroids=np.zeros(k)
 previous_glucose_centroids=np.zeros(k)
 test=False
 test1=False
+count=0
 while test==False and test1==False:
     classifier=kmc.assignLabels(hemoglobin_centroids, glucose_centroids, glucose, hemoglobin) 
     kmc.graphingKMeans(glucose, hemoglobin, classifier, hemoglobin_centroids, glucose_centroids)
@@ -21,6 +22,11 @@ while test==False and test1==False:
     glucose_centroids, hemoglobin_centroids=kmc.updateCentroidLocation(glucose, hemoglobin, classifier, k) 
     test=np.array_equal(previous_hemoglobin_centroids, hemoglobin_centroids)
     test1=np.array_equal(previous_glucose_centroids, glucose_centroids)
+    count=count+1
+    if count==50:
+        break
+print("Glucose Centroids:",glucose_centroids)
+print("Hemoglobin Centroids:",hemoglobin_centroids)
 CKD_actual=np.count_nonzero(classification)
 non_CKD_actual=158-CKD_actual
 True_positive_rate=classifier[:CKD_actual]
