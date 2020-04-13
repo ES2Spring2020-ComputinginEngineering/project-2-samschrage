@@ -1,4 +1,7 @@
-#Please place your FUNCTION code for step 4 here.
+#Sam Schrage
+#Project 2
+# I worked alone on this project
+#K means clustering functions
 
 import numpy as np
 import matplotlib.pyplot as plt

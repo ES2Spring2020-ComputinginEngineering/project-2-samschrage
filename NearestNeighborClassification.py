@@ -1,5 +1,7 @@
-#Please put your code for Step 2 and Step 3 in this file.
-
+#Sam Schrage
+#Project 2
+# I worked alone on this project
+#Nearest Neighbor and K Nearest Neighbor
 
 import numpy as np
 import matplotlib.pyplot as plt

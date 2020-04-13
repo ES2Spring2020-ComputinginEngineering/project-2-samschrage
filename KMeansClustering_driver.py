@@ -1,4 +1,7 @@
-#Please place your FUNCTION code for step 4 here.
+#Sam Schrage
+#Project 2
+# I worked alone on this project
+#k means clustering main script
 import KMeansClustering_functions as kmc #Use kmc to call your functions
 import numpy as np
 
